@@ -1,18 +1,19 @@
 
-## End user getting started walkthrough / guide
+# SuprSeed getting started walkthrough / guide
 
-This starter project provides a default boilerplate setup for using the SuprSeed engine
+This starter project provides a default boilerplate setup for using the [SuprSeed engine](https://github.com/red-dragon65/SuprSeed)
 
 **Note: It is highly recommended to take a look at the demo project under SuprSeed to get an idea of how to create a game using this starter project. There, you can see how to setup a custom engine configuration, manage scenes, create sprites, and use various engine tools.**
 
+<br/>
 
-**Initialize the project**
+## Initialize the project
 - Create a new Android project with an *Empty Activity*
 	- ensure the minimum sdk is set to 26 (Oreo: Android 8)
 
 <br/>
 
-**Add the SuprSeed dependency**
+## Add the SuprSeed dependency
 
 1. Add `maven { url = uri("https://jitpack.io") }` to your `settings.gradle.kts` file
 
@@ -54,7 +55,7 @@ dependencies {
 
 <br/>
 
-**Prepare the project**
+## Prepare the project
 - Remove the base theme portions (ie `android:theme="@style/Theme.MyApplication"`) from their `AndroidManifest.xml`
 	- The application will inherit the theme from the engine
 
@@ -106,7 +107,7 @@ dependencies {
 
 <br/>
 
-**Using the engine**
+## Using the engine
 - Note: the provided SuprSeed_Starter project does not include the following steps
 - Create a package hierarchy to keep things tidy
 	- Assets, Scenes, Sprites, Components
@@ -129,7 +130,7 @@ dependencies {
 
 <br/>
 
-**Other**
+## Other
 - Setup a custom launcher icon and app name
 	- Refactor the `ic_launcher` folder names under the `mipmap` folder to something like `custom_launcher`
 	- Override the inherited icon from the library by adding `tools:replace="android:icon, android:roundIcon"` in the `<application/>` section of their `AndroidManifest.xml` file
@@ -137,7 +138,7 @@ dependencies {
 
 <br/>
 
-**Final notes**
+## Final notes
 - SuprSeed requires the `appcompatactivity` dependency in order for the `EngineActivity` to properly work. An empty activity Android project should provide this dependency under gradle by default. If not, add the dependency follow the steps below:
 	- add the `implementation(libs.androidx.appcompat)` dependency to the `build.gradle.kts` file
 	- add the `appcompat = "1.7.0"` line under the `[versions]` section in the `libs.versions.toml` file
